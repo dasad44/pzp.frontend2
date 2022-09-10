@@ -745,6 +745,14 @@ http://www.tooplate.com/view/2098-health
     background: #4267b2;
   }
 
+#price-table {
+    background: #ffffff;
+    color: #757575;
+    border-radius: 10px;
+}
+  .price-table-header{
+      color:#252525;
+  }
 
 
   /*---------------------------------------
