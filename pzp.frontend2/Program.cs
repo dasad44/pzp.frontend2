@@ -1,9 +1,15 @@
+using pzp.frontend2.Core.Services;
+using pzp.frontend2.Infrastructure.Features;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<MailSenderService>();
+builder.Services.AddTransient<MailSender>();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
