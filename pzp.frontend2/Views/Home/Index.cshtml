@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model pzp.frontend2.Models.Mail
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
      <title>Pielęgniarki z poMocą </title>
@@ -454,13 +456,16 @@
                                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="Numer">
                                         <label for="Message">Dodatkowa wiadomość</label>
                                         <textarea class="form-control" rows="5" id="message" name="message" placeholder="Twoja wiadomość"></textarea>
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Umów się!</button>
-                                        @Html.ActionLink("eqweq", "SendMail", "Home") 
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit" onclick="location.href='@Url.Action("SendMail", "Home", new {Subject = "qqqqqaaa"})'">Umów się!</button>
                                    </div>
                               </div>
                         </form>
                     </div>
-
+                    @using (Html.BeginForm("SendMail", "Home"))
+{
+    @Html.TextBoxFor(model => model.Subject, new {@class = "form-control"})
+    <button type="submit">Subscribe</button>
+}
                </div>
           </div>
      </section>

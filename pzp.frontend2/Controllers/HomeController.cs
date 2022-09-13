@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using pzp.frontend2.Core.Services;
+using pzp.frontend2.Models;
 using System.Diagnostics;
 
 namespace pzp.frontend2.Controllers
@@ -14,16 +15,17 @@ namespace pzp.frontend2.Controllers
             _logger = logger;
             _mailSenderService = mailSenderService;
         }
-
+        
         public IActionResult Index()
         {
             return View();
         }
 
-        public void SendMail()
+        
+        public void SendMail(Mail model)
         {
             string from ="dasad33_79@o2.pl";
-            string subject = "dasdasda";
+            string subject = model.Subject;
             string body = "aaaaaaaaaaa";
             _mailSenderService.Send(from, subject, body);
         }
