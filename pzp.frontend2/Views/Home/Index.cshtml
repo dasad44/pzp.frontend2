@@ -444,8 +444,7 @@
 
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">Select Department</label>
-                                @Html.DropDownListFor(m => m.Service,
-                                new SelectList(Enum.GetValues(typeof(pzp.frontend2.Enums.Service))),
+                                @Html.DropDownListFor(m => m.Service, Html.GetEnumSelectList(typeof(pzp.frontend2.Enums.Service)),
                                 "Select Gender", new {@class="form-control"})
                             </div>
 
