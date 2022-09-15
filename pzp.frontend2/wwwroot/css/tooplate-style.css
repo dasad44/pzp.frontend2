@@ -83,10 +83,10 @@ http://www.tooplate.com/view/2098-health
     text-decoration: none !important;
   }
 
-  a:hover, a:active, a:focus {
-    color: #a5c422;
-    outline: none;
-  }
+    a:hover, a:active, a:focus {
+        color: #cc0096;
+        outline: none;
+    }
 
   ::-webkit-scrollbar{
     width: 8px;
@@ -106,8 +106,8 @@ http://www.tooplate.com/view/2098-health
     margin-top: 0;
   }
 
-  .section-btn {
-    background: #a5c422;
+.section-btn {
+    background: #cc0096;
     border: 0;
     border-radius: 3px;
     color: #ffffff;
@@ -116,7 +116,7 @@ http://www.tooplate.com/view/2098-health
     padding: 14px 20px;
     transition: transform 0.1s ease-in;
     transform: translateX(0);
-  }
+}
 
   .section-btn:hover {
     transform: translateY(-5px);
@@ -136,34 +136,13 @@ http://www.tooplate.com/view/2098-health
     padding-top: 2.5em;
   }
 
-  .btn-gray {
-    background: #393939;
-  }
+.btn-gray {
+    background: #cc0096;
+}
 
-  .btn-blue {
-    background: #4267b2;
-  }
-
-  .news-thumb {
-    background: #ffffff;
-    border-radius: 10px;
-  }
-  .news-thumb img {
-    border-radius: 10px 10px 0 0;
-  }
-
-  .news-info {
-    padding: 30px;
-    text-align: left;
-  }
-  .news-info span {
-    display: block;
-    letter-spacing: 0.5px;
-  }
-  .news-info h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.btn-blue {
+    background: #cc0096;
+}
 
   .author {
     border-top: 1px solid #f0f0f0;
@@ -186,14 +165,14 @@ http://www.tooplate.com/view/2098-health
   }
 
 
-  #about, #team, #news,
-  #news-detail {
+  #about, #team, #price-list,
+  #price-list-detail {
     position: relative;
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
-  #news, #service {
+  #price-list, #service {
     text-align: center;
   }
 
@@ -295,7 +274,7 @@ http://www.tooplate.com/view/2098-health
   }
 
   header span i {
-    color: #a5c422;
+    color: #cc0096;
     margin-right: 5px;
   }
 
@@ -319,21 +298,21 @@ http://www.tooplate.com/view/2098-health
   }
 
   .navbar-default .navbar-brand .fa {
-    color: #a5c422;
+    color: ##cc0096;
   }
 
-  .navbar-default .navbar-nav li.appointment-btn {
+.navbar-default .navbar-nav li.appointment-btn {
     margin: 3px 0 0 20px;
-  }
+}
 
   .navbar-default .navbar-nav li.appointment-btn a {
-    background: #a5c422;
-    border-radius: 3px;
-    color: #ffffff;
-    font-weight: 600;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
+        background: #cc0096;
+        border-radius: 3px;
+        color: #ffffff;
+        font-weight: 600;
+        padding-top: 12px;
+        padding-bottom: 12px;
+   }
 
   .navbar-default .navbar-nav li.appointment-btn a:hover {
     background: #4267b2;
@@ -569,9 +548,9 @@ http://www.tooplate.com/view/2098-health
      SERVICE              
   -----------------------------------------*/
 
-  #service {
-    background: #a5c422;
-  }
+#service {
+    background: #cc0096;
+}
 
   #service h2,
   #service h4 {
@@ -586,170 +565,31 @@ http://www.tooplate.com/view/2098-health
     padding: 0 22px;
   }
 
-  #service .fa {
-    font-size: 50px;
-    margin-bottom: 10px;
-    background: #ffffff;
-    color: #a5c422;
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-    border-radius: 100%;
-  }
+    #service .fa {
+        font-size: 50px;
+        margin-bottom: 10px;
+        background: #ffffff;
+        color: #cc0096;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        border-radius: 100%;
+    }
 
 
   /*---------------------------------------
-      NEWS             
+      PRICELIST           
   -----------------------------------------*/
 
-  #news, #news-detail {
+  #price-list, #price-list-detail {
     background: #f9f9f9;
   }
 
-  #news-detail blockquote {
-    margin: 30px 0;
-  }
-
-  .news-detail-thumb .news-image img {
-    border-radius: 10px;
-  }
-
-  .news-detail-thumb h3 {
-    margin-bottom: 8px;
-  }
-
-  .news-image {
-    margin-bottom: 30px;
-    position: relative;
-  }
-
-  .news-image img {
-    width: 100%;
-  }
-
-  .news-detail-thumb ul {
-    margin: 32px 12px 22px 0px;
-  }
-
-  .news-detail-thumb ul li {
-    list-style: circle;
-    font-weight: normal;
-    padding: 6px 12px 6px 0px;
-  }
-
-  .news-sidebar {
-    margin-top: 16px;
-  }
-
-  .news-social-share {
-    text-align: center;
-    padding-top: 22px;
-  }
-
-  .news-social-share .btn {
-    border-radius: 100px;
-    border: none;
-    font-size: 10px;
-    font-weight: 600;
-    margin: 2px 6px;
-    padding: 8px 14px;
-  }
-
-  .news-social-share .btn-primary {
-    background: #3b5998;
-  }
-
-  .news-social-share .btn-success {
-    background: #1da1f2;
-  }
-
-  .news-social-share .btn-danger {
-    background: #dd4b39;
-  }
-
-  .news-social-share a .fa {
-    padding-right: 4px;
-  }
-
-  .recent-post {
-    padding-top: 2px;
-    padding-bottom: 18px;
-  }
-
-  .recent-post .media img {
-    border-radius: 100%;
-    width: 80px;
-    height: 80px;
-    margin-right: 5px;
-  }
-
-  .recent-post .media-heading {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: inherit;
-    margin-top: 5px;
-  }
-
-  .news-categories {
-    margin-top: 8px;
-  }
-
-  .news-categories li a {
-    color: #2b2b2b;
-  }
-
-  .news-ads {
-    background: #ffffff;
-    border-right: 4px solid #2b2b2b;
-    padding: 42px;
-    text-align: center;
-    margin: 26px 0 26px 0;
-  }
-
-  .news-ads.sidebar-ads {
-    border-left: 4px solid #2b2b2b;
-    border-right: 0px;
-  }
-
-  .news-ads h4 {
-    font-size: 18px;
-  }
-
-  .news-tags h4 {
-    padding-bottom: 6px;
-  }
-
-  .news-categories li,
-  .news-tags li {
-    list-style: none;
-    display: inline-block;
-    margin: 4px;
-  }
-
-  .news-tags li a {
-    background: #393939;
-    border-radius: 50px;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 500;
-    text-decoration: none;
-    float: left;
-    min-width: 30px;
-    padding: 6px 12px;
-    -webkit-transition: all ease-in-out 0.4s;
-    transition: all ease-in-out 0.4s;
-  }
-
-  .news-tags li a:hover {
-    background: #4267b2;
-  }
-
-#price-table {
+    #price-table {
     background: #ffffff;
     color: #757575;
     border-radius: 10px;
-}
+    }
   .price-table-header{
       color:#252525;
   }
@@ -785,7 +625,7 @@ http://www.tooplate.com/view/2098-health
   }
 
   #appointment button#cf-submit {
-    background: #a5c422;
+    background: #cc0096;
     color: #ffffff;
     font-weight: 600;
     height: 55px;
@@ -1014,7 +854,7 @@ http://www.tooplate.com/view/2098-health
       padding-bottom: 8px;
     }
 
-    .news-sidebar {
+    .price-list-sidebar {
       margin-top: 2em;
     }
 
