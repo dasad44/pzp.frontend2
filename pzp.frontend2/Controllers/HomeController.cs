@@ -22,12 +22,9 @@ namespace pzp.frontend2.Controllers
         }
 
         
-        public void SendMail(Mail model)
+        public void SendMail(Appointment model)
         {
-            string from ="dasad33_79@o2.pl";
-            string subject = model.Subject;
-            string body = "aaaaaaaaaaa";
-            _mailSenderService.Send(from, subject, body);
+            _mailSenderService.Send(model);
         }
     }
 }

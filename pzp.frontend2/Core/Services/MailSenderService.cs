@@ -1,4 +1,5 @@
 ﻿using pzp.frontend2.Infrastructure.Features;
+using pzp.frontend2.Models;
 
 namespace pzp.frontend2.Core.Services
 {
@@ -10,9 +11,9 @@ namespace pzp.frontend2.Core.Services
         {
             _mailSender = mailSender;
         }
-        public void Send(string from, string subject, string body)
+        public void Send(Appointment appointment)
         {
-            _mailSender.Send(from, subject, body);
+            _mailSender.Send(appointment);
         }
     }
 }

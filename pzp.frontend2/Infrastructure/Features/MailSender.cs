@@ -1,16 +1,20 @@
-﻿using System.Net.Mail;
+﻿using pzp.frontend2.Models;
+using System.Net;
+using System.Net.Mail;
 
 namespace pzp.frontend2.Infrastructure.Features
 {
     public class MailSender
     {
-        public void Send(string from, string subject, string body)
+        public void Send(Appointment appointment)
         {
             string to = "dasad44_79@o2.pl";
-            MailMessage message = new MailMessage(from, to);
-            message.Subject = subject;
-            message.Body = body;
-            SmtpClient client = new SmtpClient("smtp.gmail.com");
+            MailMessage message = new MailMessage("kontaktpielegniarki@gmail.com", "dasad44_79@o2.pl");
+            message.Subject = appointment.Subject;
+            message.Body = appointment.Body;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.Credentials = new NetworkCredential("kontaktpielegniarki@gmail.com", "Dajciepieniadze");
+            client.EnableSsl = true;
             client.UseDefaultCredentials = true;
 
             try
