@@ -1,20 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using pzp.frontend2.Core.Services;
+using pzp.frontend2.Interfaces;
+using pzp.frontend2.Models;
 
 namespace pzp.frontend2.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IMailSenderService _mailSenderService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IMailSenderService mailSenderService)
         {
-            _logger = logger;
+            _mailSenderService = mailSenderService;
         }
-
+        
         public IActionResult Index()
         {
             return View();
+        }
+
+        public void SendMail(Appointment model)
+        {
+            _mailSenderService.Send(model);
         }
     }
 }
