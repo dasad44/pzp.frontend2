@@ -13,7 +13,7 @@ namespace pzp.frontend2.Enums
         Drugs_And_Injections,
         [Display(Name = "Toaleta pacjenta")]
         Patient_Toilet,
-        [Display(Name = "nadzór nad pacjentem")]
+        [Display(Name = "Nadzór nad pacjentem")]
         Patient_Supervision,
         [Display(Name = "Pomiar parametrów")]
         Parameter_Measurement,
