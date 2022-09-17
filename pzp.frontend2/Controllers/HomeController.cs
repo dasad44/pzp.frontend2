@@ -13,15 +13,16 @@ namespace pzp.frontend2.Controllers
         {
             _mailSenderService = mailSenderService;
         }
-        
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public void SendMail(Appointment model)
+        public IActionResult SendMail(Appointment model)
         {
             _mailSenderService.Send(model);
+            return View("Index");
         }
     }
 }
