@@ -22,7 +22,7 @@
 
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
+    @Html.Raw(TempData["mailAlert"])
     <!-- PRE LOADER -->
     <section class="preloader">
         <div class="spinner">
@@ -395,31 +395,34 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="name">Imię</label>
                                 @Html.TextBoxFor(model => model.FirstName, new {@class = "form-control", @placeholder = "Twoje imię", @id="name", @name="name"})
-
+                                
                             </div>
 
                             <div class="col-md-6 col-sm-6">
                                 <label for="name">Nazwisko</label>
                                 @Html.TextBoxFor(model => model.LastName, new {@class = "form-control", @placeholder = "Twoje nazwisko", @id="name", @name="name"})
-
+                                @Html.ValidationMessageFor(m => m.LastName, null, new { @class = "text-danger" })
                             </div>
 
-                            <div class="col-md-6 col-sm-6">
+                            <div class="col-md-6 col-sm-6"> 
                                 <label for="email">Email</label>
                                 @Html.TextBoxFor(model => model.Email, new {@class = "form-control", @placeholder = "Twój mail", @id="email", @name="email"})
+                                @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
                             </div>
 
                             <div class="col-md-6 col-sm-6">
-                                <label for="select">Select Department</label>
+                                <label for="select">Jakiej pomocy potrzebujesz?</label>
                                 @Html.DropDownListFor(m => m.Service, Html.GetEnumSelectList(typeof(pzp.frontend2.Enums.Service)),
-                                "Jakiej pomocy potrzebujesz?", new {@class="form-control"})
+                                "Wybierz", new {@class="form-control"})
                             </div>
 
                             <div class="col-md-12 col-sm-12">
                                 <label for="telephone">Numer telefonu</label>
                                 @Html.TextBoxFor(model => model.PhoneNumber, new {@class = "form-control", @placeholder = "Numer telefonu", @id="phone", @name="phone"})
+                                @Html.ValidationMessageFor(m => m.PhoneNumber, null, new { @class = "text-danger" })<br>
                                 <label for="Message">Dodatkowa wiadomość</label>
                                 @Html.TextAreaFor(model => model.Body, new {@class = "form-control", @placeholder = "Twoja wiadomość", @id="message", @name="message", @rows="5"})
+                                @Html.ValidationMessageFor(m => m.Body, null, new { @class = "text-danger" })
                                 <button type="submit" class="form-control" id="cf-submit" name="submit" onclick="location.href='@Url.Action("SendMail", "Home")'">Umów się!</button>
                             </div>
                         </div>
