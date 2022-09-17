@@ -22,7 +22,7 @@ namespace pzp.frontend2.Controllers
         public IActionResult SendMail(Appointment model)
         {
             _mailSenderService.Send(model);
-            return View("Index");
+            return Redirect("/#appointment");
         }
     }
 }
