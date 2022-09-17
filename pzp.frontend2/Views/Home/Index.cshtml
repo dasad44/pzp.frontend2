@@ -420,7 +420,7 @@
                                 @Html.TextBoxFor(model => model.PhoneNumber, new {@class = "form-control", @placeholder = "Numer telefonu", @id="phone", @name="phone"})
                                 <label for="Message">Dodatkowa wiadomość</label>
                                 @Html.TextAreaFor(model => model.Body, new {@class = "form-control", @placeholder = "Twoja wiadomość", @id="message", @name="message", @rows="5"})
-                                <button type="submit" class="form-control" id="cf-submit" name="submit" onclick="location.href='@Url.Action("SendMail", "Home", new {Subject = "qqqqqaaa"})'">Umów się!</button>
+                                <button type="submit" class="form-control" id="cf-submit" name="submit" onclick="location.href='@Url.Action("SendMail", "Home")'">Umów się!</button>
                             </div>
                         </div>
                     </form>
