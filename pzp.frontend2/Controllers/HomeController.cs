@@ -21,8 +21,16 @@ namespace pzp.frontend2.Controllers
 
         public IActionResult SendMail(Appointment model)
         {
-            _mailSenderService.Send(model);
-            return Redirect("/#appointment");
+            if (ModelState.IsValid)
+            {
+                _mailSenderService.Send(model);
+                TempData["mailAlert"] = "<script>alert('Mail wysłany pomyślnie!');</script>";
+            }
+            else
+            {
+                TempData["mailAlert"] = "<script>alert('Wysyłanie maila nie powiodło się :(');</script>";
+            }
+            return View("Index");
         }
     }
 }
