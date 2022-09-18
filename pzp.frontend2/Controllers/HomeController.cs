@@ -24,6 +24,7 @@ namespace pzp.frontend2.Controllers
 
         public IActionResult SendMail(Appointment model)
         {
+            model.Subject = "Nasza strona - nowa wiadomość!";
             if (ModelState.IsValid)
             {
                 _mailSenderService.Send(model);

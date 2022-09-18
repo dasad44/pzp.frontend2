@@ -5,6 +5,8 @@ namespace pzp.frontend2.Enums
 {
     public enum Service
     {
+        [Display(Name = "Inne")]
+        Other,
         [Display(Name = "Cewnikowanie")]
         Catheterization,
         [Display(Name = "Rany i opatrunki")]
