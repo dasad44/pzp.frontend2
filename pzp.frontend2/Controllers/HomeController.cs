@@ -8,6 +8,9 @@ namespace pzp.frontend2.Controllers
     public class HomeController : Controller
     {
         private readonly IMailSenderService _mailSenderService;
+        private const string _scrollDownScript = "<script>setTimeout (function() {document.getElementById('appointment').scrollIntoView();}, 100);</script>";
+        private const string _sweetAlertScriptError = "<script>swal('Błąd!', 'Nie udało się wysłać maila, spróbuj jeszcze raz', 'error');</script>";
+        private const string _sweetAlertScriptSuccess = "<script>swal('Sukces!', 'Mail został wysłany pomyślnie', 'success');</script>";
 
         public HomeController(IMailSenderService mailSenderService)
         {
@@ -24,11 +27,12 @@ namespace pzp.frontend2.Controllers
             if (ModelState.IsValid)
             {
                 _mailSenderService.Send(model);
-                TempData["mailAlert"] = "<script>alert('Mail wysłany pomyślnie!');</script>";
+                TempData["mailAlert"] = _sweetAlertScriptSuccess;
             }
             else
             {
-                TempData["mailAlert"] = "<script>alert('Wysyłanie maila nie powiodło się :(');</script>";
+                TempData["scrollDown"] = _scrollDownScript;
+                TempData["mailAlert"] = _sweetAlertScriptError;
             }
             return View("Index");
         }
